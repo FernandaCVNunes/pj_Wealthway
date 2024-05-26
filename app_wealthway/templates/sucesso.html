@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Meta Cadastrada</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/logo_wealthway.png' %}">
+
+    </head>
+
+    <body>
+        <nav id="menu" class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/logo_wealthway.png' %}" alt="" width="50" height="44" class="d-inline-block align-text-center">
+                    WealthWay!
+                </a>
+                <h3>Sua Calculadora Financeira</h3>
+                <h6 class="fst-italic align-text-center">Realize os seus sonhos!</h6>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="row" id="resultado">
+                <div class=col-md-6">
+                    <div class="calculator container">
+                        <div class="display">
+                            <br>
+                            <h3>Meta salva com sucesso!</h3>
+                            <br>
+                            <h2>Resumo da Meta</h2>
+                            <h4>
+                                Você concluirá sua meta <span>{{ nome_meta }}</span>
+                                <br>
+                                no valor de <span>{{ valor_total }}</span> reais
+                                <br>
+                                dentro de <span>{{ parcelas }}</span>  meses!
+                            </h4>
+                            <h2></h2>
+                             <div id="links">
+                                <a href="{% url 'metas' %}" class="btn btn-primary">Ver todas as metas</a>
+                                <a href="{% url 'metas' %}" class="btn btn-secondary">Adicionar outra meta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center text-lg-start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12">
+                        <img src="{% static 'img/logo_wealthway.png' %}" alt="Logo">
+                    </div>
+                    <div class="col-lg-10 col-md-12">
+                        <h5 class="text-uppercase">Links</h5>
+                        <ul id="enderecos" class="text-dark">
+                            <li>
+                                <a href="{% url 'metas' %}" >Voltar ao Início</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'metas' %}" >Ver todas as metas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="copyright" class="col-md-12 text-center p-3">
+                        &copy; 2024 WealthWay. Todos os direitos reservados.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

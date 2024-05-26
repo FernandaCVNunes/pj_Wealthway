@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>WhearthWay!</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/logo_wealthway.png' %}">
+
+    </head>
+
+    <body>
+        <nav id="menu" class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/logo_wealthway.png' %}" alt="" width="50" height="44" class="d-inline-block align-text-center">
+                    WealthWay!
+                </a>
+                <h3>Sua Calculadora Financeira</h3>
+                <h6 class="fst-italic align-text-center">Realize os seus sonhos!</h6>
+            </div>
+        </nav>
+
+        {% if form.erros %}
+            <div class="alert alert-danger">
+                <strong>Erro!</strong> Por favor, corrija os seguintes erros:
+                <ul>
+                    {% for field_errors in form.errors.values %}
+                        {% for error in field_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <main class="content container ">
+            <div class="row">
+                <div class=col-md-6">
+                    <div id="calculadora" class="calculator">
+                        <div class="display">
+                            <h3>Cadastro de Metas</h3>
+                            <form id="formulario" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit" class="btn btn-success">Adicionar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    {% if lp_metas %}
+                    <div id="lista_metas" class="buttons">
+                        <div class="display">
+                            <h2> Metas Cadastradas : </h2>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nome da Tarefa</th>
+                                        <th scope="col">Valor Total</th>
+                                        <th scope="col">Valor Mensal</th>
+                                        <th scope="col">Parcelas Totais</th>
+                                        <th scope="col">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for meta in lp_metas %}
+                                    <tr>
+                                        <td>{{ meta.nome_meta }}</td>
+                                        <td>{{ meta.valor_total }}</td>
+                                        <td>{{ meta.valor_mensal }}</td>
+                                        <td>{{ meta.parcelas_totais }}</td>
+                                        <td>{{ meta.criado_em }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div>
+                        <p>Não há metas cadastradas.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center text-lg-start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12">
+                        <img src="{% static 'img/logo_wealthway.png' %}" alt="Logo">
+                    </div>
+                    <div class="col-lg-10 col-md-12">
+                        <h5 class="text-uppercase">Links</h5>
+                        <ul id="enderecos" class="text-dark">
+                            <li>
+                                <a href="{% url 'metas' %}" >Voltar ao Início</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'metas' %}" >Ver todas as metas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="copyright" class="col-md-12 text-center p-3">
+                        &copy; 2024 WealthWay. Todos os direitos reservados.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
