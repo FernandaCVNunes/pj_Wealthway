@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbab579-83ff-47c4-94ca-bf5e76a91171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pj_wealthway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/static/img/logo_wealthway.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/templates/sucesso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_wealthway/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pj_wealthway/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pj_wealthway/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pj_wealthway/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pj_wealthway/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pj_wealthway/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +107,7 @@
       <workItem from="1716639720335" duration="11901000" />
       <workItem from="1716651817655" duration="6340000" />
       <workItem from="1716724727878" duration="255000" />
-      <workItem from="1716724993984" duration="1965000" />
+      <workItem from="1716724993984" duration="2510000" />
     </task>
     <servers />
   </component>
